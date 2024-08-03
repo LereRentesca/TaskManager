@@ -10,12 +10,12 @@ app = Flask(__name__)
 #HTTP GET METHODS
 @app.get("/tasks")
 def get_all_tasks():
-    tasks_list = task.scan();
+    tasks_list = task.scan()
     out = {
         "tasks" : tasks_list,
         "ok":True
     }
-    return out;
+    return out
 
 
 @app.get("/tasks/<int:pk>/")
